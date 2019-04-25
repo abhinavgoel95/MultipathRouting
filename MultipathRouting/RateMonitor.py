@@ -146,10 +146,10 @@ class ProjectController(app_manager.RyuApp):
                 src = j[1]
                 dst = j[3]
                 if src in self.overflow and dst in self.overflow:
-                    print src, " close to overflow. Using multiple routes"
-                    self.need_two = True
-                    self.install_paths(j[1], j[2], j[3], j[4], j[5], j[6])
-                    break          
+                    two = str(raw_input("close to overflow, use multiple routes (y/n): "))
+                    if two =='y':
+                        self.need_two = True
+                        self.install_paths(j[1], j[2], j[3], j[4], j[5], j[6])
             print '\n' 
 
     def _request_stats(self, datapath):
