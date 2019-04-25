@@ -100,7 +100,6 @@ class ProjectController(app_manager.RyuApp):
                 self.best_paths = None
         
             hub.sleep(setting.MONITOR_PERIOD)
-            #print(self.flow_stats)
             self.show_stat('flow')
             hub.sleep(1)
     
@@ -138,7 +137,7 @@ class ProjectController(app_manager.RyuApp):
                 except Exception, e:
                     pass
                     
-            """src_dst = []
+            src_dst = []
             for i in self.paths:
                 if i not in src_dst:
                     src_dst.append(i)
@@ -149,10 +148,8 @@ class ProjectController(app_manager.RyuApp):
                 if src in self.overflow and dst in self.overflow:
                     print src, " close to overflow. Using multiple routes"
                     self.need_two = True
-                    #for k in j[0][0].keys():
-                    #    self.del_flow(self.datapath_list[k], j[-1])
                     self.install_paths(j[1], j[2], j[3], j[4], j[5], j[6])
-                    break"""          
+                    break          
             print '\n' 
 
     def _request_stats(self, datapath):
