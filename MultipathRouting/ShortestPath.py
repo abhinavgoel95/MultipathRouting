@@ -27,7 +27,7 @@ REFERENCE_BW = 10000000
 
 DEFAULT_BW = 10000000
 
-MAX_PATHS = 3
+MAX_PATHS = 1
 
 class ProjectController(app_manager.RyuApp):
     OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]
